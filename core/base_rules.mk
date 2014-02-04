@@ -199,7 +199,7 @@ built_module_path :=
 LOCAL_UNINSTALLABLE_MODULE := $(strip $(LOCAL_UNINSTALLABLE_MODULE))
 ifdef LOCAL_UNINSTALLABLE_MODULE
   ifeq (,$(filter $(LOCAL_MODULE_CLASS),JAVA_LIBRARIES STATIC_LIBRARIES))
-    $(error $(LOCAL_PATH): Illegal use of LOCAL_UNINSTALLABLE_MODULE)
+    $(warning $(LOCAL_PATH): Illegal use of LOCAL_UNINSTALLABLE_MODULE)
   endif
 else
   # B2G hackery: Prevent installing .jar and .apk modules on device
